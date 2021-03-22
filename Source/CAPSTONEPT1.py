@@ -54,15 +54,17 @@ def download(links):
 '''Parse subdirectories for text files + download text files Asynchronously'''
 def download_async(link):
     url = requests.get(link)
+    time.sleep(500)
     soup = bs(url.content, 'html.parser')
     contents = soup.find_all('a')
     for textfile in contents:   #search through list of links for text file links and download text files
         if re.search('.+txt', str(textfile)):
             file = requests.get(sub_URL1 + textfile.get('href'))
+            time.sleep(500)
             with open(async_path + "\\" + textfile.text, 'wb') as f: 
                 print(textfile.text)
                 f.write(file.content)
-                time.sleep(1000)
+                time.sleep(500)
 
 def main():
     
@@ -70,7 +72,7 @@ def main():
 
     parseDirectory(links) #parse directory to build list of subdirectory links
     
-#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     '''
     #SERIAL
     startTime = time()
@@ -78,8 +80,8 @@ def main():
     endTime = time()
     serialDuration = endTime - startTime
     '''
-#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
-
+#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
     #ASYNC
     startTime = time()
     with concurrent.futures.ProcessPoolExecutor(max_workers=2) as \
@@ -88,7 +90,7 @@ def main():
             executor.submit(download_async, link)
     endTime = time()
     asyncDuration = endTime - startTime
-
+    
 #xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
     #print("Serial Duration was ", "{:.2f}".format(serialDuration), " seconds")
