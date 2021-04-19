@@ -12,4 +12,5 @@ My capstone is a manual for Parallel Computing within Python. I use Python 3.9.0
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
  - [requests](https://docs.python-requests.org/en/master/)
 
-# Requirements Analysis
+# Usage Instructions
+Take the serial program files found within the [Source Code folder](Source%20Code/) and parallelize them using the [manual](Manual/v2.5(revised)Manual%20for%20Parallel%20Computing%20in%20Python.pdf) as a primary resource. Feel free to reference the code I wrote as a complementary reference to the manual.
