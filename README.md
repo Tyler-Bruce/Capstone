@@ -5,7 +5,7 @@ My capstone is a manual for Parallel Computing within Python. I use Python 3.9.0
  - [Manual Docs](Manual/Microsoft%20Word%20Docs)
  - [Source Code](Source%20Code/)
  - [Proposal Docs](Proposal/)
- - [Latest Version of Manual](Manual/v2.5(revised)Manual%20for%20Parallel%20Computing%20in%20Python.pdf)
+ - [Latest Version of Manual](Manual/Final.pdf)
 # Table of Contents
 1. [Installation Instructions](Installation-Instructions)
 2. [Usage Instructions](Usage-Instructions)
