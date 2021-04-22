@@ -6,11 +6,27 @@ My capstone is a manual for Parallel Computing within Python. I use Python 3.9.0
  - [Source Code](Source%20Code/)
  - [Proposal Docs](Proposal/)
  - [Latest Version of Manual](Manual/v2.5(revised)Manual%20for%20Parallel%20Computing%20in%20Python.pdf)
+# Table of Contents
+1. [Installation Instructions](Installation-Instructions)
+2. [Usage Instructions](Usage-Instructions)
+3. [License](License)
 
 # Installation Instructions
-[Python 3.9.0+](https://www.python.org/downloads/) was used in this project. [Visual Studio Code](https://code.visualstudio.com/Download) was the IDE that worked well for me, but any Python friendly IDE will work. Instructions for how to download Python modules can be found at this [link](https://docs.python.org/3/installing/index.html). The modules used in this project that are not within the Python standard library are:
+[Python 3.9.0+](https://www.python.org/downloads/) was used in this project. [Visual Studio Code](https://code.visualstudio.com/Download) was the IDE that worked well for me, but any Python friendly IDE will work. The modules used in this project that are not within the Python standard library are:
  - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
  - [requests](https://docs.python-requests.org/en/master/)
 
+To install a Python module in Visual Studio Code, first find your terminal and type in this piece of code.
+```
+python -m pip install SomePackage
+```
+This should activate the pip installer which will download and install your module of choice. After this process is complete, you can import your module like so.
+```Python
+import SomePackage
+```
+
 # Usage Instructions
 Take the serial program files found within the [Source Code folder](Source%20Code/) and parallelize them using the [manual](Manual/v2.5(revised)Manual%20for%20Parallel%20Computing%20in%20Python.pdf) as a primary resource. Feel free to reference the code I wrote as a complementary piece to the manual.
+
+# License
+[MIT License](License/LICENSE)
