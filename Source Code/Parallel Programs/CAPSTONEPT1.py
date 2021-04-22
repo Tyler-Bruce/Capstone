@@ -84,7 +84,7 @@ def main():
     
     #ASYNC
     startTime = time()
-    with concurrent.futures.ProcessPoolExecutor(max_workers=2) as \
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as \
     executor:
         for link in links:
             executor.submit(download_async, link)
