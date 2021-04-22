@@ -7,7 +7,9 @@ My capstone is a manual for Parallel Computing within Python. I use Python 3.9.0
  - [Proposal Docs](Proposal/)
  - [Latest Version of Manual](Manual/v2.5(revised)Manual%20for%20Parallel%20Computing%20in%20Python.pdf)
 # Table of Contents
-
+1. [Installation Instructions](Installation-Instructions)
+2. [Usage Instructions](Usage-Instructions)
+3. [License](License)
 
 # Installation Instructions
 [Python 3.9.0+](https://www.python.org/downloads/) was used in this project. [Visual Studio Code](https://code.visualstudio.com/Download) was the IDE that worked well for me, but any Python friendly IDE will work. The modules used in this project that are not within the Python standard library are:
@@ -19,7 +21,7 @@ To install a Python module in Visual Studio Code, first find your terminal and t
 python -m pip install SomePackage
 ```
 This should activate the pip installer which will download and install your module of choice. After this process is complete, you can import your module like so.
-``` Python
+```Python
 import SomePackage
 ```
 
