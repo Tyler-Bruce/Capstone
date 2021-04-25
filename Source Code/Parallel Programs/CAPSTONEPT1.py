@@ -20,9 +20,6 @@ os.makedirs(serial_path, exist_ok = True)
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 #NOTE: this script downloads 556 files for both serial and async functions
-#NOTE: This script is exceeding the allowed requests for the SEC's website. 
-#NOTE: After checking through the debugger, the SEC website only allows 10 requests per second
-#NOTE: I get timed out for 10 minutes when I go over which causes the 0.01 second finish times
 
 '''Globals'''
 sub_URL1 = 'https://www.sec.gov'  #splitting URL so that I can search through the list of directories easier
@@ -54,17 +51,17 @@ def download(links):
 '''Parse subdirectories for text files + download text files Asynchronously'''
 def download_async(link):
     url = requests.get(link)
-    time.sleep(500)
+    time.sleep(800)
     soup = bs(url.content, 'html.parser')
     contents = soup.find_all('a')
     for textfile in contents:   #search through list of links for text file links and download text files
         if re.search('.+txt', str(textfile)):
             file = requests.get(sub_URL1 + textfile.get('href'))
-            time.sleep(500)
+            time.sleep(800)
             with open(async_path + "\\" + textfile.text, 'wb') as f: 
                 print(textfile.text)
                 f.write(file.content)
-                time.sleep(500)
+                time.sleep(800)
 
 def main():
     
@@ -96,8 +93,7 @@ def main():
     #print("Serial Duration was ", "{:.2f}".format(serialDuration), " seconds")
     print("Async Duration was ", "{:.2f}".format(asyncDuration), " seconds")
 
-    #First serial runthrough time is 213 seconds.
-    #Second serial runthrough time is 139.66 seconds
+
     print('end')  #program ends
 
 if __name__ == "__main__":
