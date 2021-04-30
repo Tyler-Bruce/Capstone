@@ -8,8 +8,12 @@ My capstone is a manual for Parallel Computing within Python. I use Python 3.9.0
  - [Latest Version of Manual](Manual/Final.pdf)
 # Table of Contents
 1. [Installation Instructions](Installation-Instructions)
-2. [Usage Instructions](Usage-Instructions)
-3. [License](License)
+2. [Requirements Analysis](Requirements=Analysis)
+3. [Usage Instructions](Usage-Instructions)
+4. [License](License)
+
+# Requirements Analysis
+Once I had my project set in stone, I had a clear idea of what I needed to do for my project to be considered complete. I needed to develop a procedural manual for parallelizing CPU bound and I/O bound code with Python. I needed to utilize threads, processes, thread and process pools using Async IO and I needed do so with a clear set of easily repeatable instructions that were supplemented with examples of code that I wrote. Provided with the manual are serial programs that are to be attempted by the end user of the manual. For reference, I also include parallel programs using the same serial programs so that they can help guide the end user with parallelizing their own code. All of this material is to be uploaded to Github so that it may be downloaded and attempted by the user.
 
 # Installation Instructions
 [Python 3.9.0+](https://www.python.org/downloads/) was used in this project. [Visual Studio Code](https://code.visualstudio.com/Download) was the IDE that worked well for me, but any Python friendly IDE will work. The modules used in this project that are not within the Python standard library are:
